@@ -21,14 +21,27 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-    compileOnly("org.projectlombok:lombok")
-    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-    annotationProcessor("org.projectlombok:lombok")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-}
+subprojects {
+    apply {
+        plugin("java")
+        plugin("org.springframework.boot")
+        plugin("io.spring.dependency-management")
 
-tasks.withType<Test> {
-    useJUnitPlatform()
+    }
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+    }
+
+    dependencies {
+        implementation("org.springframework.boot:spring-boot-starter")
+        compileOnly("org.projectlombok:lombok")
+        annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+        annotationProcessor("org.projectlombok:lombok")
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
+
 }
