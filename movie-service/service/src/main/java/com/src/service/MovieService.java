@@ -22,7 +22,6 @@ public class MovieService implements IMovieService {
 
     @Override
     public CompletableFuture<List<Movie>> getAllMovies() {
-//        List<Movie> movies = this.movieRepository.findAllMoviesWithActors();
         return CompletableFuture.supplyAsync(this.movieRepository::findAllMoviesWithActors);
     }
 
@@ -32,6 +31,12 @@ public class MovieService implements IMovieService {
         Pageable pageable = PageRequest.of(page, size);
         Page<Movie> movies = this.movieRepository.findAll(pageable);
         return CompletableFuture.supplyAsync(() ->  movies);
+    }
+
+    @Override
+    public CompletableFuture<List<Movie>> search(String word) {
+        List<Movie> movies = this.movieRepository.search(word);
+        return CompletableFuture.supplyAsync(() -> movies);
     }
 
     @Override

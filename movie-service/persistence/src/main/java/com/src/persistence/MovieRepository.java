@@ -12,4 +12,7 @@ import java.util.List;
 public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query("SELECT DISTINCT m FROM Movie m LEFT JOIN FETCH m.actors")
     List<Movie> findAllMoviesWithActors();
+
+    @Query("SELECT m FROM Movie m WHERE m.title LIKE %:word%")
+    List<Movie> search(@Param("word")String word);
 }

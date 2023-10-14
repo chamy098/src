@@ -10,6 +10,9 @@ public interface IMovieService {
     CompletableFuture<List<Movie>> getAllMovies();
 
     CompletableFuture<Page<Movie>> getMoviesByPage(int size, int page);
+
+    CompletableFuture<List<Movie>> search(String word);
+
     CompletableFuture<Movie> save(Movie movie);
 
     CompletableFuture<Movie> getById(Long imdbID);

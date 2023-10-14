@@ -28,6 +28,11 @@ public class MovieController {
         return this.movieService.getMoviesByPage(size, page);
     }
 
+    @GetMapping("search/{word}")
+    public CompletableFuture<List<Movie>> search(@PathVariable String word) {
+        return this.movieService.search(word);
+    }
+
     @PostMapping("create")
     public CompletableFuture<Movie> create(@RequestBody Movie movie) {
         return this.movieService.save(movie);
