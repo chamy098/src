@@ -40,6 +40,7 @@ subprojects {
         implementation("org.springframework.boot:spring-boot-starter-cache")
         implementation("com.github.ben-manes.caffeine:caffeine:2.9.0")
         compileOnly("org.projectlombok:lombok")
+        implementation("com.h2database:h2")
         annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
         annotationProcessor("org.projectlombok:lombok")
         testImplementation("org.springframework.boot:spring-boot-starter-test")

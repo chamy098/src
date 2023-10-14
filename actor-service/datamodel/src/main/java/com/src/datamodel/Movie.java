@@ -1,7 +1,6 @@
 package com.src.datamodel;
 
 import jakarta.persistence.*;
-
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -29,10 +28,5 @@ public class Movie {
     private String description;
 
     @ManyToMany
-    @JoinTable(
-            name = "Movie_Actors",
-            joinColumns = @JoinColumn(name = "movie_imdbID"),
-            inverseJoinColumns = @JoinColumn(name = "actors_id")
-    )
     private List<Actor> actors;
 }

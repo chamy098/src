@@ -4,7 +4,7 @@ spring:
     hibernate:
       ddl-auto: create
   datasource:
-    url: jdbc:h2:tcp://localhost:1521/mem:testdb
+    url: jdbc:h2:tcp://h2-database:1521/mem:testdb
     username: sa
     password:
   cache:

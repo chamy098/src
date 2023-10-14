@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/application/actor-service.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/application/actor-service.application.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/application/movie-service.application.main.iml" filepath="$PROJECT_DIR$/.idea/modules/application/movie-service.application.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/movie-service.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/movie-service.core.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datamodel/movie-service.datamodel.main.iml" filepath="$PROJECT_DIR$/.idea/modules/datamodel/movie-service.datamodel.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/movie-service.persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/movie-service.persistence.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/movie-service.service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/movie-service.service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/src.iml" filepath="$PROJECT_DIR$/.idea/src.iml" />
     </modules>
   </component>

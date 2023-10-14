@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd1ac067-3f74-44c3-87d8-85531b068097" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/actor-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/application/src/main/java/com/src/application/configurators/Interceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/application/src/main/java/com/src/application/controllers/ActorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/application/src/main/java/com/src/application/controllers/RequestCounterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/application/src/main/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/core/src/main/java/com/src/core/exceptions/CustomExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/core/src/main/java/com/src/core/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/core/src/main/java/com/src/core/interfaces/IActorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/core/src/main/java/com/src/core/interfaces/IRequestCounterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/datamodel/src/main/java/com/src/datamodel/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/datamodel/src/main/java/com/src/datamodel/DTO/CustomErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/datamodel/src/main/java/com/src/datamodel/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/persistence/src/main/java/com/src/persistence/ActorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/service/src/main/java/com/src/service/ActorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/actor-service/service/src/main/java/com/src/service/RequestCounterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/application/actor-service.application.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/application/movie-service.application.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/core/movie-service.core.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/datamodel/movie-service.datamodel.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/persistence/movie-service.persistence.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/service/movie-service.service.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/actor-service/application/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/actor-service/application/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actor-service/application/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/actor-service/application/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actor-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/actor-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actor-service/service/src/test/java/com/src/service/MovieServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/application/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/application/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/datamodel/src/main/java/com/src/datamodel/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/datamodel/src/main/java/com/src/datamodel/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-service/datamodel/src/main/java/com/src/datamodel/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-service/datamodel/src/main/java/com/src/datamodel/Movie.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2WlTkTPmHERbjP9RjpK2u9RyTRv" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd1ac067-3f74-44c3-87d8-85531b068097" name="Changes" comment="" />
+      <created>1697306310328</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697306310328</updated>
+      <workItem from="1697306311409" duration="7000" />
+      <workItem from="1697306369963" duration="5000" />
+      <workItem from="1697308061329" duration="74000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

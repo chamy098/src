@@ -11,4 +11,9 @@ services:
     build:
       context: ./movie-service  # Path to the directory containing the Dockerfile
     ports:
+      - "8081:8080"  # Map the container's port 8081 to the host's port 8080
+  actor-service:
+    build:
+      context: ./actor-service  # Path to the directory containing the Dockerfile
+    ports:
       - "8080:8080"  # Map the container's port 8080 to the host's port 8080
