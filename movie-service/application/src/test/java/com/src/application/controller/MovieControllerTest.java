@@ -36,12 +36,17 @@ public class MovieControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Test
-    public void testSaveMovie() throws Exception  {
+    private Movie createTestMovie() {
         Movie movie = new Movie();
         movie.setTitle("Test movie");
         movie.setReleaseYear(2021);
         movie.setDescription("Some desc here");
+        return movie;
+    }
+
+    @Test
+    public void testSaveMovie() throws Exception  {
+        Movie movie = createTestMovie();
 
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders
                         .post("/api/movie/save")
@@ -67,13 +72,13 @@ public class MovieControllerTest {
                         )
                 .andExpect(status().isOk())
                 .andReturn();
-
+        Movie movie = createTestMovie();
         List<Movie> movieList = (List<Movie>) result.getAsyncResult();
 
         // Check returned values
-        assertThat(movieList.get(0).getTitle(), containsString("Test movie"));
-        assertThat(movieList.get(0).getReleaseYear(), equalTo(2021));
-        assertThat(movieList.get(0).getDescription(), containsString("Some desc here"));
+        assertThat(movieList.get(0).getTitle(), containsString(movie.getTitle()));
+        assertThat(movieList.get(0).getReleaseYear(), equalTo(movie.getReleaseYear()));
+        assertThat(movieList.get(0).getDescription(), containsString(movie.getDescription()));
 
     }
 }

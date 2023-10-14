@@ -1,9 +1,11 @@
 package com.src.datamodel;
 
 import jakarta.persistence.*;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import com.src.datamodel.Actor;
 import lombok.Setter;
 
 import java.util.List;
@@ -15,10 +17,15 @@ import java.util.List;
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "imdbID")
+    private Long imdbID;
 
+    @NotBlank(message = "Title is required")
     private String title;
+
+    @NotNull(message = "Release year is required")
     private int releaseYear;
+
     private String description;
 
     @ManyToMany
