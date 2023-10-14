@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/actor-service" />
+        <option name="gradleJvm" value="openjdk-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/actor-service" />
+            <option value="$PROJECT_DIR$/actor-service/application" />
+            <option value="$PROJECT_DIR$/actor-service/core" />
+            <option value="$PROJECT_DIR$/actor-service/datamodel" />
+            <option value="$PROJECT_DIR$/actor-service/persistence" />
+            <option value="$PROJECT_DIR$/actor-service/service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/movie-service" />
+        <option name="gradleJvm" value="openjdk-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/movie-service" />
+            <option value="$PROJECT_DIR$/movie-service/application" />
+            <option value="$PROJECT_DIR$/movie-service/core" />
+            <option value="$PROJECT_DIR$/movie-service/datamodel" />
+            <option value="$PROJECT_DIR$/movie-service/persistence" />
+            <option value="$PROJECT_DIR$/movie-service/service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

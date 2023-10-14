@@ -1,0 +1,14 @@
+version: '3'
+services:
+  h2-database:
+    image: oscarfonts/h2
+    container_name: h2-database
+    ports:
+      - "1521:1521"
+    environment:
+      - H2_OPTIONS=-ifNotExists
+  movies-service:
+    build:
+      context: ./movie-service  # Path to the directory containing the Dockerfile
+    ports:
+      - "8080:8080"  # Map the container's port 8080 to the host's port 8080
