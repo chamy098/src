@@ -22,8 +22,8 @@ public class MovieService implements IMovieService {
 
     @Override
     public CompletableFuture<List<Movie>> getAllMovies() {
-        List<Movie> movies = this.movieRepository.findAll();
-        return CompletableFuture.supplyAsync(() -> movies);
+//        List<Movie> movies = this.movieRepository.findAllMoviesWithActors();
+        return CompletableFuture.supplyAsync(this.movieRepository::findAllMoviesWithActors);
     }
 
 

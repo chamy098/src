@@ -3,7 +3,9 @@ package com.src.application.controllers;
 import com.src.core.interfaces.IMovieService;
 import com.src.datamodel.Movie;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,8 +17,8 @@ import java.util.concurrent.CompletableFuture;
 public class MovieController {
     private final IMovieService movieService;
 
-
     @GetMapping("getAllMovies")
+    @Cacheable("All-movies")
     public CompletableFuture<List<Movie>> getAllMovies() {
         return this.movieService.getAllMovies();
     }
