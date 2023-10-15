@@ -6,7 +6,7 @@
  - Dockerized.
 
 ## Run
- - `docker-compose up` or `docker-compose up -d` to run in background.
+ - `./build_and_run.bat` or `./build_and_run.sh`
 
 ## Services
 -  http://localhost:8080/api/actor - Actor-service
