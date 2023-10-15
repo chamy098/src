@@ -26,5 +26,10 @@ public class Actor {
     private Date dateOfBirth;
 
     @ManyToMany
+    @JoinTable(
+            name = "Movie_Actors",
+            joinColumns = @JoinColumn(name = "movie_imdbID"),
+            inverseJoinColumns = @JoinColumn(name = "actors_id")
+    )
     private List<Movie> movies;
 }

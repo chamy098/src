@@ -3,6 +3,7 @@ package com.src.service;
 import com.src.core.exceptions.NotFoundException;
 import com.src.core.interfaces.IMovieService;
 import com.src.datamodel.Movie;
+import com.src.persistence.ActorRepository;
 import com.src.persistence.MovieRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -20,9 +21,12 @@ public class MovieService implements IMovieService {
 
     private final MovieRepository movieRepository;
 
+    private final ActorRepository actorRepository;
+
     @Override
     public CompletableFuture<List<Movie>> getAllMovies() {
-        return CompletableFuture.supplyAsync(this.movieRepository::findAllMoviesWithActors);
+        List<Movie> movies = this.movieRepository.findAll();
+        return CompletableFuture.supplyAsync(() -> movies);
     }
 
 
@@ -41,6 +45,10 @@ public class MovieService implements IMovieService {
 
     @Override
     public CompletableFuture<Movie> save(Movie movie) {
+        //Save actors if any
+        if(movie.getActors() != null && !movie.getActors().isEmpty()){
+            this.actorRepository.saveAll(movie.getActors());
+        }
         return CompletableFuture.supplyAsync(() -> this.movieRepository.save(movie));
     }
 
@@ -56,21 +64,18 @@ public class MovieService implements IMovieService {
     @Override
     public CompletableFuture<Movie> update(Movie movie) {
         //Check if the movie exists
-        Movie existingMovie = this.movieRepository.findById(movie.getImdbID()).orElse(null);
-        if(existingMovie == null) {
-            throw new NotFoundException("Movie not found");
+        getById(movie.getImdbID()).join();
+        //Update actors if any
+        if(movie.getActors() != null && !movie.getActors().isEmpty()){
+            this.actorRepository.saveAll(movie.getActors());
         }
         return CompletableFuture.supplyAsync(() -> this.movieRepository.save(movie));
-
     }
 
     @Override
     public CompletableFuture<Boolean> delete(Long imdbID) {
         //Check if the movie exists
-        Movie existingMovie = this.movieRepository.findById(imdbID).orElse(null);
-        if(existingMovie == null) {
-            throw new NotFoundException("Movie not found");
-        }
+        getById(imdbID).join();
 
         return CompletableFuture.supplyAsync(() -> {
             this.movieRepository.deleteById(imdbID);

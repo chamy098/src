@@ -13,6 +13,6 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query("SELECT DISTINCT m FROM Movie m LEFT JOIN FETCH m.actors")
     List<Movie> findAllMoviesWithActors();
 
-    @Query("SELECT m FROM Movie m WHERE m.title LIKE %:word%")
+    @Query("SELECT m FROM Movie m WHERE UPPER(m.title) LIKE UPPER(CONCAT('%', :word, '%'))")
     List<Movie> search(@Param("word")String word);
 }

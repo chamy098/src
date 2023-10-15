@@ -27,6 +27,4 @@ public class Movie {
 
     private String description;
 
-    @ManyToMany
-    private List<Actor> actors;
 }
